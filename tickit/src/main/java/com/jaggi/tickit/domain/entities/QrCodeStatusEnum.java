@@ -1,4 +1,4 @@
-package com.jaggi.tickit.domain;
+package com.jaggi.tickit.domain.entities;
 
 public enum QrCodeStatusEnum {
     ACTIVE, EXPIRED

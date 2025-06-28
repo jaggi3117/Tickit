@@ -1,7 +1,5 @@
-package com.jaggi.tickit.domain;
+package com.jaggi.tickit.domain.entities;
 
-import com.jaggi.tickit.domain.EventStatusEnum;
-import com.jaggi.tickit.domain.TicketType;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
