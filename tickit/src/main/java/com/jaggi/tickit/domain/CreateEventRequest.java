@@ -15,12 +15,12 @@ import java.util.List;
 @NoArgsConstructor
 public class CreateEventRequest {
 
-    private String name;
-    private LocalDateTime start;
-    private LocalDateTime end;
-    private String venue;
-    private LocalDateTime salesStart;
-    private LocalDateTime salesEnd;
-    private EventStatusEnum status;
-    private List<CreateTicketTypeRequest> ticketTypes = new ArrayList<>();
+  private String name;
+  private LocalDateTime start;
+  private LocalDateTime end;
+  private String venue;
+  private LocalDateTime salesStart;
+  private LocalDateTime salesEnd;
+  private EventStatusEnum status;
+  private List<CreateTicketTypeRequest> ticketTypes = new ArrayList<>();
 }

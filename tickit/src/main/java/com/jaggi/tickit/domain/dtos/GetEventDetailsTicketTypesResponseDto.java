@@ -10,7 +10,7 @@ import java.util.UUID;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreateTicketTypeResponseDto {
+public class GetEventDetailsTicketTypesResponseDto {
 
   private UUID id;
   private String name;
@@ -19,5 +19,4 @@ public class CreateTicketTypeResponseDto {
   private Integer totalAvailable;
   private LocalDateTime createdAt;
   private LocalDateTime updatedAt;
-
 }

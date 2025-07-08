@@ -17,43 +17,43 @@ import java.util.UUID;
 @NoArgsConstructor
 @Builder
 public class QrCode {
-    @Id
-    @Column(name = "id", nullable = false, updatable = false)
-    private UUID id;
 
-    @Column(name = "status", nullable = false)
-    @Enumerated(EnumType.STRING)
-    private QrCodeStatusEnum status;
+  @Id
+  @Column(name = "id", nullable = false, updatable = false)
+  private UUID id;
 
-    @Column(name = "value", columnDefinition = "TEXT", nullable = false)
-    private String value;
+  @Column(name = "status", nullable = false)
+  @Enumerated(EnumType.STRING)
+  private QrCodeStatusEnum status;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ticket_id")
-    private Ticket ticket;
+  @Column(name = "value", columnDefinition = "TEXT", nullable = false)
+  private String value;
 
-    @CreatedDate
-    @Column(name = "created_at", updatable = false, nullable = false)
-    private LocalDateTime createdAt;
+  @ManyToOne(fetch = FetchType.LAZY)
+  @JoinColumn(name = "ticket_id")
+  private Ticket ticket;
 
-    @LastModifiedDate
-    @Column(name = "updated_at", nullable = false)
-    private LocalDateTime updatedAt;
+  @CreatedDate
+  @Column(name = "created_at", updatable = false, nullable = false)
+  private LocalDateTime createdAt;
 
-    @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        QrCode qrCode = (QrCode) o;
-        return Objects.equals(id, qrCode.id) && status == qrCode.status && Objects.equals(value,
-                qrCode.value) && Objects.equals(createdAt, qrCode.createdAt) && Objects.equals(updatedAt,
-                qrCode.updatedAt);
-    }
+  @LastModifiedDate
+  @Column(name = "updated_at", nullable = false)
+  private LocalDateTime updatedAt;
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, status, value, createdAt, updatedAt);
-    }
+  @Override
+  public boolean equals(Object o) {
+      if (o == null || getClass() != o.getClass()) {
+          return false;
+      }
+    QrCode qrCode = (QrCode) o;
+    return Objects.equals(id, qrCode.id) && status == qrCode.status && Objects.equals(value,
+        qrCode.value) && Objects.equals(createdAt, qrCode.createdAt) && Objects.equals(updatedAt,
+        qrCode.updatedAt);
+  }
 
+  @Override
+  public int hashCode() {
+    return Objects.hash(id, status, value, createdAt, updatedAt);
+  }
 }

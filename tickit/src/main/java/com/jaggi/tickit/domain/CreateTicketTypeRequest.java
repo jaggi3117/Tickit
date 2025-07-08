@@ -9,8 +9,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CreateTicketTypeRequest {
 
-    private String name;
-    private Double price;
-    private String description;
-    private Integer totalAvailable;
+  private String name;
+  private Double price;
+  private String description;
+  private Integer totalAvailable;
 }
